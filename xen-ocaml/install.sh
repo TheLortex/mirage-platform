@@ -5,6 +5,7 @@ if [ "$prefix" = "" ]; then
   prefix=`opam config var prefix`
 fi
 
+OCAML_LIB_DIR=$(ocamlopt -config )
 OCAMLOPT_VERSION=$(ocamlopt -version)
 echo Detected OCaml version $OCAMLOPT_VERSION
 case $OCAMLOPT_VERSION in
